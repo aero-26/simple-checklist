@@ -14,6 +14,7 @@ body {
   align-items: center;
   min-height: 100vh;
   color: white;
+  flex-direction: column;
   background-color: #353434;
 }
 
@@ -21,6 +22,13 @@ h1 {
   font-size: 3.5rem;
   font-weight: 400;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  margin-top: 5rem;
 }
 
 .item {
@@ -67,5 +75,30 @@ input[type="checkbox"]:checked + label > z {
 }
 
 input[type="checkbox"]:focus + label::before {
-  background-color: orange;
+  background-color: orangered;
+}
+
+h2:hover::before {
+  content: "This is a tooltip";
+  display: block;
+  width: max-content;
+  bottom: 6em;
+  right: 45%;
+  transform: translate(35%);
+  background-color: orangered;
+  padding: 0.5em;
+  border-radius: 10px;
+  position: absolute;
+}
+
+h2:hover::after {
+  content: "";
+  border: 15px solid transparent;
+  display: block;
+  width: fit-content;
+  border-top-color: orangered;
+  top: calc(33rem - 5px);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
