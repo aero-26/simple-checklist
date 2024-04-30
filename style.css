@@ -83,8 +83,8 @@ h2:hover::before {
   display: block;
   width: max-content;
   bottom: 6em;
-  right: 45%;
-  transform: translate(35%);
+  right: 50%;
+  transform: translate(50%);
   background-color: orangered;
   padding: 0.5em;
   border-radius: 10px;
